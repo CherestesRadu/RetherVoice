@@ -8,7 +8,7 @@
         <a href='#'>About</a>
         <a href='#'>Download</a>
         <a href='#'>Login</a>
-        <a href='#'>Register</a>
+        <a href='{{ route('register') }}'>Register</a>
     </div>
     @endguest
 
@@ -17,7 +17,12 @@
         <a href='#'>Home</a>
         <a href='#'>Rooms</a>
         <a href='#'>Profile</a>
-        <a href='#'>Log out</a>
+        <form method="POST" action="{{ route('logout') }}">
+    @csrf
+        <button type="submit" class="logout-button">
+            Log out
+        </button>
+</form>
     </div>
     @endauth
 </nav>
