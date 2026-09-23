@@ -7,7 +7,7 @@
     <div class='guest-links'>
         <a href='#'>About</a>
         <a href='#'>Download</a>
-        <a href='#'>Login</a>
+        <a href={{ route('login') }}>Login</a>
         <a href='{{ route('register') }}'>Register</a>
     </div>
     @endguest
